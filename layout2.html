@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 2</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 960px;
+            margin: 20px 10px;
+        }
+        div, ul, footer {
+            background: silver;
+        }
+        nav, section, main, footer {
+            display: grid;
+            grid-gap: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        nav {
+            height: 80px;
+            grid-template: 80px / repeat(4, 1fr);
+            margin-bottom: 10px;
+        }
+        nav > div {
+            grid-column: 1 / 2;
+        }
+        ul {
+            height: 40px;
+            padding: 0 30px;
+            display: flex;
+            list-style-type: none;
+            text-align: right;
+            align-content: center;
+            grid-column: 3 / 5;
+            justify-content: space-between;
+
+        }
+        ul li {
+            display: inline;
+            align-self: center;
+        }
+        main {
+            /* grid-template-rows: 300px; */
+            grid-gap: 0;
+        }
+        h1 {
+            font-size: 43px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        section {
+            grid-gap: 10px;
+            grid-template: repeat(3, 160px) / repeat(3, 1fr);
+        }
+        footer {
+            height: 60px;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Company Logo</div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Lorem ipsum dolor sit amet, ne saepe<br> phaedrum cotidieque has, natum zril pro ei.</h1>
+        <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an<br> recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h2>
+    </main>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+</body>
+</html>

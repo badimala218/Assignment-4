@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 1</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: 960px;
+            margin: 20px 10px;
+        }
+        div, ul, footer {
+            background: silver;
+        }
+        nav, section, main, footer {
+            display: grid;
+            grid-gap: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        nav {
+            height: 80px;
+            grid-template: 80px / repeat(4, 1fr);
+        }
+        nav > div {
+            grid-column: 1 / 2;
+        }
+        ul {
+            height: 40px;
+            padding: 0 30px;
+            display: flex;
+            list-style-type: none;
+            text-align: right;
+            align-content: center;
+            grid-column: 3 / 5;
+            justify-content: space-between;
+
+        }
+        ul li {
+            display: inline;
+            align-self: center;
+        }
+        main {
+            grid-template-rows: 300px;
+        }
+        section {
+            grid-template: 160px / repeat(2, 1fr);
+        }
+        footer {
+            height: 60px;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Company Logo</div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    </nav>
+    <main>
+        <div>Featured Product Image</div>
+    </main>
+    <section>
+        <div>Product 1</div>
+        <div>Product 2</div>
+    </section>
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+</body>
+</html>
